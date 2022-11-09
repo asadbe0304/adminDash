@@ -6,111 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>lesson-7</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Admin Dashboard </title>
 </head>
 
 <body>
-    <div class="table-responsive">
-        <table class="table table-primary table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 2</th>
-                    <th scope="col">Column 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="">
-                    <td scope="row">R1C1</td>
-                    <td>R1C2</td>
-                    <td>R1C3</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="table-responsive">
-        <table class="table table-striped
-        table-hover	
-        table-bordered
-        table-primary
-        align-middle">
-            <thead class="table-light">
-                <caption>Table Name</caption>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr class="table-primary">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-                <tr class="table-primary">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-        </table>
-    </div>
-
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Action</a>
+    <header class="header bg-success">
+        <div class="container">
+            <div class="row d-flex justify-content-between w-100 col-12">
+                <h2 class="text-white fw-bold col-6">Admin Dashboard</h2>
+                <ul class="nav nav-tabs col gap-4">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">Active</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold text-white" data-bs-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold">Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold">Activate</a>
+                    </li>
+                </ul>
             </div>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">Another link</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link disabled">Disabled</a>
-        </li>
-    </ul>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-            aria-valuemax="100">Description</div>
-        <div class="progress-bar bg-success" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0"
-            aria-valuemax="100">Description</div>
-        <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-            aria-valuemax="100">Description</div>
-    </div>
-    <nav aria-label="Page navigation">
-        <ul class="pagination    ">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+        </div>
+    </header>
+    <!-- header end  -->
+    <!-- main start  -->
+    <main>
+        <section>
+
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-3 m-1  p-2 bg-warning rounded">
+                        <form action="#" id="send" class="form">
+                            <label class="form-label w-100 py-2"> Enter Name
+                                <input type="text" required class="form-control" name="" id="userName"
+                                    placeholder="Enter Name">
+                            </label>
+                            <label class="form-label w-100 py-2">Enter Score
+                                <input type="number" required min="1" max="100" id="userScore" class="form-control"
+                                    name="score" placeholder="Enter score">
+                            </label>
+                            <label class="form-label w-100 py-2">Enter Photos
+                                <input type="text" required min="1" max="100" id="userScore" class="form-control"
+                                    name="score" placeholder="https://www....png">
+                            </label>
+                            <button class="btn btn-primary w-100 my-3">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 py-2 bg-light">
+                        <div class="table-responsive">
+                            <table
+                                class="table table-striped align-middle table-bordered  table-hover table-borderless">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>ID </th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr class="table-primary table-bordered">
+                                        <td scope="row">1</td>
+                                        <td><img class="avatar" src="https://picsum.photos/id/4/40/40" alt="avatar"> Azamat Axrorov</td>
+                                        <td>100</td>
+                                        <td><button class="btn btn-dark">Edit</button></td>
+                                        <td><button class="btn btn-danger">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col m-1 p-2 bg-secondary rounded">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/plugin.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
