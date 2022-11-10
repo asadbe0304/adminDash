@@ -12,7 +12,7 @@ getUser();
 function renderData(data = []) {
     data.length > 0 ? data.forEach((e) => {
         const tr = createElement('tr', 'item table-primary', ` <td scope="row">${e.id}</td>
-        <td><img class="avatar" src="${e.avatar.src}" width="40" height="40" alt="avatar"> ${e.user_name}
+        <td><img class="avatar" src="${e.avatar}" width="40" height="40" alt="avatar"> ${e.user_name}
             </td>
         <td>${e.score}</td>
         <td><button class="btn btn-dark" data-set-edit = ${e.id}>Edit</button></td>
@@ -24,7 +24,7 @@ function renderData(data = []) {
 const addUser = () => {
     const userName = $('#userName').value.trim();
     const userScore = $('#userScore').value.trim();
-    const userPic = $('.avatar')
+    const userPic = $('.avatar').value
 
     if (userScore.length === 0 || userName.length === 0) {
         alert('please')
@@ -46,4 +46,12 @@ const addUser = () => {
 $('.form').addEventListener('submit', (e) => {
     e.preventDefault()
     addUser()
+})
+
+
+$('.tbody').addEventListener('click', (e) => {
+    let target = e.target;
+    if (target.classList.contains('btn-danger')) {
+        target.parentElement.parentElement.remove();
+    }
 })
